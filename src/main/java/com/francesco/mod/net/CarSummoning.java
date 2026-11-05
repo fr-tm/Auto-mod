@@ -15,6 +15,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.phys.AABB;
 
+import com.francesco.mod.entity.CarPlacement;
 import com.francesco.mod.entity.FrancescoEntity;
 import com.francesco.mod.entity.ModEntities;
 import com.francesco.mod.sound.ModSounds;
@@ -104,7 +105,7 @@ public final class CarSummoning {
 
 	/** Puts the car on free ground, first right in front of the player, otherwise somewhere close by. */
 	private static void settle(FrancescoEntity car, ServerPlayer player, double frontX, double frontZ) {
-		if (car.randomTeleport(frontX, player.getY(), frontZ, false)) {
+		if (CarPlacement.placeAt(car, frontX, player.getY(), frontZ)) {
 			return;
 		}
 		RandomSource random = car.getRandom();
@@ -114,9 +115,10 @@ public final class CarSummoning {
 			if (Math.abs(dx) < 1.8 && Math.abs(dz) < 1.8) {
 				continue;
 			}
-			if (car.randomTeleport(player.getX() + dx, player.getY(), player.getZ() + dz, false)) {
+			if (CarPlacement.placeAt(car, player.getX() + dx, player.getY(), player.getZ() + dz)) {
 				return;
 			}
 		}
+		car.snapTo(player.position());
 	}
 }

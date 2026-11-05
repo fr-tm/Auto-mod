@@ -101,8 +101,7 @@ public class FollowPlayerGoal extends Goal {
 			if (Math.abs(dx) < 1.8 && Math.abs(dz) < 1.8) {
 				continue;
 			}
-			if (this.mob.randomTeleport(this.target.getX() + dx, this.target.getY(), this.target.getZ() + dz, true)) {
-				this.mob.getNavigation().stop();
+			if (CarPlacement.placeAt(this.mob, this.target.getX() + dx, this.target.getY(), this.target.getZ() + dz)) {
 				return;
 			}
 		}
