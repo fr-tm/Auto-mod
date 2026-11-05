@@ -1,0 +1,14 @@
+{
+	"engine_loop": {
+		"sounds": [ { "name": "francesco:engine_loop", "stream": false } ]
+	},
+	"engine_shift": {
+		"sounds": [ { "name": "francesco:engine_shift", "stream": false } ]
+	},
+	"engine_start": {
+		"sounds": [ { "name": "francesco:engine_start", "stream": false } ]
+	},
+	"engine_stop": {
+		"sounds": [ { "name": "francesco:engine_stop", "stream": false } ]
+	}
+}

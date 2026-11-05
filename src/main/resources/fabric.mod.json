@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "francesco",
+	"version": "${version}",
+	"name": "Francesco Companion",
+	"description": "Ein roter Formel-Rennwagen mit Gesicht, der dir treu folgt. F+R+A ruft ihn oder schickt ihn weg.",
+	"authors": ["You"],
+	"license": "All-Rights-Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["com.francesco.mod.FrancescoMod"],
+		"client": ["com.francesco.mod.client.FrancescoModClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
