@@ -16,15 +16,3 @@ Benötigt wird zusätzlich die Fabric API (0.165.x für 26.3) im mods-Ordner.
 * Rechtsklick auf Francesco: folgen / warten (wie bisher).
 * Francesco ist unsterblich (auch gegen /kill und Void). Wegschicken geht nur mit F + R + A.
 
-## Motorsound (leise)
-* Stillstand: Leerlauf im Neutral (tiefes, leises Brummen).
-* Fahrt: Hochdrehen im 1. Gang, dann sechs Gänge. Nach jedem Schalten fallen die Drehzahlen ab,
-  dazu ein kurzes, leises Schaltgeräusch.
-* Start- und Abstellgeräusch beim Rufen und Wegschicken.
-* Lautstärke regelt der Schieberegler "Freundliche Kreaturen" (Neutral) in den Soundeinstellungen.
-  Konstanten zum Feintunen: `EngineSoundInstance` (VOLUME_*, GEAR_TOP, PITCH_*).
-
-## Jar über GitHub bauen lassen
-Projekt auf GitHub hochladen (alle Dateien und Ordner, auch `.github`). Dann Reiter **Actions** öffnen,
-den Lauf "Build mod" anklicken und unten unter **Artifacts** `francesco-companion` herunterladen.
-Darin liegt die fertige Jar (die `-sources.jar` wird nicht gebraucht).
